@@ -1,6 +1,6 @@
 section#header header {
     height: 10vh;
-    background: #3232ff;
+    background: var(--color-primary);
     color: var(--color-white);
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@ section#header header .burger:hover div, section#header header .fries:hover div 
 section#header header .burger div {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: var(--color-white);
     margin: 5px 0px;
     transition: all 0.3s ease;
 }
@@ -40,7 +40,7 @@ section#header header .burger div {
 section#header header .fries div {
     width: 15px;
     height: 3px;
-    background-color: #fff;
+    background-color: var(--color-white);
     margin: 5px 0px;
     transition: all 0.3s ease;
 }
@@ -116,6 +116,8 @@ section#header aside#drawer .option {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    overflow-x: hidden;
+    color: var(--color-text);
 }
 
 section#header aside#drawer .option.selected {
@@ -153,4 +155,38 @@ section#header aside#drawer .option.selected img {
     transition: all 0.3s ease;
     -webkit-filter: grayscale(1) invert(1);
     filter: grayscale(1) invert(1);
+}
+
+@media only screen and (max-width: 1024px) {
+
+    section#header aside#drawer {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    section#header aside#drawer {
+        width: 80vw;
+    }
+
+    section#header header h3 {
+        font-size: 22px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    section#header header {
+        padding: 0px 14px;
+    }
+
+    section#header aside#drawer {
+        width: 80vw;
+    }
+
+    section#header header h3 {
+        margin-left: 16px;
+    }
 }
